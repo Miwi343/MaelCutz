@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Appointment - Mael Cutz</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="appointment-page">
+  <!-- Overlay content -->
+  <div class="content">
+    <header class="hero">
+      <h1 class="logo-text">Mael Cutzz</h1>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Back to Home</a>
+      </nav>
+    </header>
+
+    <!-- Appointment Form -->
+    <section class="appointment-form zig-right">
+      <h2>Book Your Appointment</h2>
+      <form class="booking-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="haircut-type">Type of Service</label>
+          <select id="haircut-type" name="haircut-type" required>
+            <option value="">Select a service...</option>
+            <option value="quick-touchup">Quick Touch Up / Line Up - $15</option>
+            <option value="lineup-maintenance">Line Up + Maintenance Package - $20</option>
+            <option value="full-haircut">Regular Haircut - $30</option>
+            <option value="full-maintenance">Regular Haircut + Maintenance Package - $40</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="referral">How did you hear about us?</label>
+          <select id="referral" name="referral" required>
+            <option value="">Select an option...</option>
+            <option value="social-media">Social Media</option>
+            <option value="friend">Friend/Family</option>
+            <option value="walk-in">Walk-in</option>
+            <option value="google">Google Search</option>
+            <option value="yelp">Yelp</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="notes">Additional Notes</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Any specific requests or details about your haircut..."></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Continue to Schedule</button>
+      </form>
+    </section>
+
+    <!-- Calendar Integration Section -->
+    <section class="calendar-section zig-left">
+      <h2>Select Your Time</h2>
+      <div class="calendar-container">
+        <!-- Google Calendar integration will go here -->
+        <div class="calendar-placeholder">
+          <p>Calendar integration coming soon...</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html> 

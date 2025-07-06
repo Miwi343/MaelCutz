@@ -10,21 +10,24 @@
 </head>
 <body>
   <!-- Background video -->
-  <div class="video-background">
-    <video autoplay muted loop playsinline>
-      <source src="videos/mael-cutting.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
-    </video>
-  </div>
+  <video id="bg-video" autoplay muted loop playsinline preload="auto">
+    <source src="videos/mael-cutting.mp4" type="video/mp4" />
+    <source src="videos/mael-cutting.webm" type="video/webm" />
+    <source src="videos/mael-cutting.ogv" type="video/ogg" />
+    Your browser does not support HTML5 video.
+  </video>
 
   <!-- Overlay content -->
   <div class="content">
     <header class="hero">
-      <h1>Mael Cutz</h1>
+      <h1 class="logo-text">Mael Cutzz</h1>
+      <nav class="main-nav">
+        <a href="appointment.html" class="nav-link">Book Appointment</a>
+      </nav>
     </header>
 
     <!-- Testimonials -->
-    <section class="testimonials" data-aos="fade-up">
+    <section class="testimonials zig-right">
         <h2>Testimonials</h2>
         <div class="testimonial">
           <p>"Mael gives the sharpest fades in town—nobody compares."</p>
@@ -46,7 +49,7 @@
       
 
     <!-- Gallery -->
-    <section class="gallery" data-aos="fade-up">
+    <section class="gallery zig-left">
       <h2>Gallery</h2>
       <div class="photos">
         <img src="images/cut1.jpg" alt="Haircut 1"/>
@@ -56,7 +59,7 @@
     </section>
 
     <!-- Pricing -->
-    <section class="pricing" data-aos="fade-up">
+    <section class="pricing zig-right">
         <h2>Pricing</h2>
         <table>
           <tr>
@@ -64,22 +67,21 @@
             <td>$15</td>
           </tr>
           <tr>
-            <td>Line Up + Hygiene Maintenance Package</td>
+            <td>Line Up + Maintenance Package <span class="info-icon" data-tooltip="Maintenance includes eye brows, facial shave, and other extra perks">ⓘ</span></td>
             <td>$20</td>
           </tr>
           <tr>
-            <td>Full Haircut</td>
+            <td>Regular Haircut</td>
             <td>$30</td>
           </tr>
           <tr>
-            <td>Full Haircut + Hygiene Maintenance Package</td>
+            <td>Regular Haircut + Maintenance Package <span class="info-icon" data-tooltip="Maintenance includes eye brows, facial shave, and other extra perks">ⓘ</span></td>
             <td>$40</td>
           </tr>
         </table>
         <a href="appointment.html" class="appointment-btn">Make an Appointment</a>
       </section>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
