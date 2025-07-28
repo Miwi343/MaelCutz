@@ -382,3 +382,75 @@ select {
   justify-content: center;
   margin-top: 2rem;
 }
+
+/* ========== Pricing styling ========== */
+.pricing-option {
+  margin-bottom: 40px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid var(--gold);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+.pricing-option h3 {
+  font-size: 2rem;
+  color: var(--gold);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.price-tag {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.description {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: var(--white);
+  line-height: 1.5;
+  font-family: 'Anton', sans-serif;
+}
+
+.pricing-wrapper {
+  position: relative;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease;
+}
+
+.book-arrow {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--gold);
+  color: black;
+  font-size: 2rem;
+  padding: 0 12px;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: right 0.3s ease, opacity 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.pricing-wrapper:hover .book-arrow {
+  right: -20px;
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (max-width: 600px) {
+  .book-arrow {
+    display: none;
+  }
+}
+
+
