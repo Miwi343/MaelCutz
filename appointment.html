@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Book Appointment - Mael Cutz</title>
+  <title>Book Appointment - Mael Cutzz</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body class="appointment-page">
@@ -16,15 +16,21 @@
       </nav>
     </header>
 
-    <!-- Appointment Form -->
+    <!-- Appointment Form Section -->
     <section class="appointment-form zig-right">
       <h2>Book Your Appointment</h2>
-      <form class="booking-form">
+
+      <form class="booking-form" id="booking-form">
         <div class="form-group">
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required>
         </div>
-        
+
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
         <div class="form-group">
           <label for="haircut-type">Type of Service</label>
           <select id="haircut-type" name="haircut-type" required>
@@ -35,7 +41,7 @@
             <option value="full-maintenance">Regular Haircut + Maintenance Package - $40</option>
           </select>
         </div>
-        
+
         <div class="form-group">
           <label for="referral">How did you hear about us?</label>
           <select id="referral" name="referral" required>
@@ -48,29 +54,35 @@
             <option value="other">Other</option>
           </select>
         </div>
-        
+
         <div class="form-group">
           <label for="notes">Additional Notes</label>
           <textarea id="notes" name="notes" rows="4" placeholder="Any specific requests or details about your haircut..."></textarea>
         </div>
+
+        <input type="hidden" id="appointment-time-hidden" name="appointment-time" required>
+
+        <!-- Calendar Integration Section -->
+        <section class="calendar-section">
+          <h2>Select Your Time</h2>
+          <div class="calendar-scroll-container">
+            <div id="time-slot-table" class="time-slot-table">
+              <!-- Columns inserted here by JS -->
+            </div>
+          </div>
+          <input type="hidden" id="appointment-time-hidden" name="appointment-time" required />
+        </section>
         
-        <button type="submit" class="submit-btn">Continue to Schedule</button>
+
+        <!-- Submit Button -->
+        <div class="submit-section">
+          <button type="submit" class="submit-btn">Schedule Appointment</button>
+        </div>
       </form>
     </section>
-
-    <!-- Calendar Integration Section -->
-    <section class="calendar-section zig-left">
-      <h2>Select Your Time</h2>
-      <div class="calendar-container">
-        <!-- Google Calendar integration will go here -->
-        <div class="calendar-placeholder">
-          <p>Calendar integration coming soon...</p>
-        </div>
-      </div>
-    </section>
-
   </div>
 
   <script src="js/script.js"></script>
+  <script src="js/booking.js"></script>
 </body>
-</html> 
+</html>
