@@ -1,3 +1,4 @@
 backend/config/credentials.json
 .env
 progress-screencaptures/
+raw_files/
