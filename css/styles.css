@@ -50,12 +50,14 @@ html, body {
 
 /* ========== Hero Section ========== */
 .hero {
-  height: 100vh;
+  height: 92vh; /* instead of 100vh */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  flex-direction: column;
 }
+
 
 .hero h1 {
   font-size: 5rem;
@@ -98,25 +100,42 @@ section h2 {
 }
 
 /* ========== Testimonials ========== */
-.testimonials .testimonial {
-  max-width: 700px;
-  margin: 30px auto;
+.testimonials h2 {
   text-align: center;
-  font-style: italic;
-  background: transparent;
-  border-left: 4px solid var(--gold);
-  border-radius: 8px;
-  padding: 24px 32px;
-  color: var(--white);
-  font-size: 1.1rem;
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 32px;
 }
 
-.testimonials span {
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.testimonial {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px 24px;
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  color: var(--white);
+  font-style: italic;
+  font-size: 1rem;
+  text-align: left;
+  min-height: 140px;
+}
+
+.testimonial span {
   display: block;
-  margin-top: 15px;
+  margin-top: 12px;
   font-weight: bold;
   color: var(--gold);
+  font-style: normal;
 }
+
 
 /* ========== Gallery ========== */
 .gallery .photos {
@@ -192,6 +211,7 @@ section h2 {
   letter-spacing: 2px;
   text-align: center;
   text-transform: none; /* Allow lowercase */
+  margin-bottom: 0px;
 }
 
 /* ========== Forms ========== */
@@ -452,5 +472,46 @@ select {
     display: none;
   }
 }
+
+/* ========== Scroll Arrow styling ========== */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.scroll-down {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.arrow-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(90deg); /* Make › point downward */
+}
+
+.arrow {
+  font-size: 8rem;
+  color: var(--gold);
+  animation: bounceVertical 1.2s infinite;
+  margin: -0.4rem 0; /* reduce spacing between arrows */
+}
+
+@keyframes bounceVertical {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+}
+
+
+
+
 
 

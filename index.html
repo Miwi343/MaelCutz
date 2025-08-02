@@ -11,24 +11,79 @@
 <body>
   <!-- Background video -->
   <video id="bg-video" autoplay muted loop playsinline preload="auto">
-    <source src="videos/mael-cutting.mp4" type="video/mp4" />
-    <source src="videos/mael-cutting.webm" type="video/webm" />
-    <source src="videos/mael-cutting.ogv" type="video/ogg" />
+    <source src="videos/final_video_montage.mp4" type="video/mp4" />
     Your browser does not support HTML5 video.
   </video>
 
   <!-- Overlay content -->
   <div class="content">
     <header class="hero">
-      <h1 class="logo-text">Mael Cutzz</h1>
-      <nav class="main-nav">
-        <a href="appointment.html" class="nav-link">Book Appointment</a>
-      </nav>
+      <div class="hero-content">
+        <h1 class="logo-text">Mael Cutzz</h1>
+        <nav class="main-nav">
+          <a href="appointment.html" class="nav-link">Book Appointment Now</a>
+        </nav>
+        <div class="scroll-down">
+          <span class="arrow-wrapper">
+            <span class="arrow">›</span>
+          </span>
+        </div>             
+      </div>
     </header>
+      
+    <!-- Pricing -->
+    <section class="pricing zig-right">
+      <h2>Pricing</h2>
+      <div class="pricing-wrapper">
+        <div class="pricing-option">
+          <h3>Line Up <span class="price-tag">$10</span></h3>
+          <p class="description">A quick edge-up around the hairline and beard, no full haircut.</p>
+        </div>
+      </div>
 
-    <!-- Testimonials -->
+      <div class="pricing-wrapper">
+        <div class="pricing-option">
+          <h3>Line Up + Maintenance Package <span class="price-tag">$15</span></h3>
+          <p class="description">Includes a clean line-up plus eyebrow shaping, facial hair cleanup, and moisturizing hot towel.</p>
+        </div>
+      </div>
+        
+      <div class ="pricing-wrapper">
+        <div class="pricing-option">
+          <h3>Regular Haircut <span class="price-tag">$20</span></h3>
+          <p class="description">Full haircut using clippers and scissors, finished with styling and mirror check.</p>
+        </div>
+      </div>
+        
+      <div class="pricing-wrapper">
+        <div class="pricing-option">
+          <h3>Regular Haircut + Maintenance Package <span class="price-tag">$25</span></h3>
+          <p class="description">Complete haircut plus eyebrows, beard cleanup, hot towel, and optional razor work.</p>
+        </div>
+      </div>
+      
+      <div class="appointment-btn-wrapper">
+        <a href="appointment.html" class="appointment-btn">Make an Appointment</a>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery zig-left">
+      <h2>Gallery</h2>
+      <div class="photos">
+        <img src="images/cut1.jpg" alt="Haircut 1"/>
+        <img src="images/cut2.jpg" alt="Haircut 2"/>
+        <img src="images/cut3.jpg" alt="Haircut 3"/>
+        <img src="images/cut4.jpg" alt="Haircut 4"/>
+        <img src="images/cut5.gif" alt="Happy Haircut 5"/>
+        <img src="images/cut6.gif" alt="Haircut 6"/>
+      </div>
+    </section>
+
+    <!-- Testimonals -->
     <section class="testimonials zig-right">
-        <h2>Testimonials</h2>
+      <h2>Testimonials</h2>
+      <div class="testimonials-grid">
         <div class="testimonial">
           <p>"Mael gives the sharpest fades in town—nobody compares."</p>
           <span>- Nick Ajram</span>
@@ -45,55 +100,10 @@
           <p>"Been going to Mael for years—never disappointed."</p>
           <span>- Giddy</span>
         </div>
-      </section>
-      
-
-    <!-- Gallery -->
-    <section class="gallery zig-left">
-      <h2>Gallery</h2>
-      <div class="photos">
-        <img src="images/cut1.jpg" alt="Haircut 1"/>
-        <img src="images/cut2.jpg" alt="Haircut 2"/>
-        <img src="images/cut3.jpg" alt="Haircut 3"/>
       </div>
     </section>
 
-    <!-- Pricing -->
-    <section class="pricing zig-right">
-        <h2>Pricing</h2>
-        <div class="pricing-wrapper">
-          <div class="pricing-option">
-            <h3>Line Up <span class="price-tag">$10</span></h3>
-            <p class="description">A quick edge-up around the hairline and beard, no full haircut.</p>
-          </div>
-        </div>
-  
-        <div class="pricing-wrapper">
-          <div class="pricing-option">
-            <h3>Line Up + Maintenance Package <span class="price-tag">$15</span></h3>
-            <p class="description">Includes a clean line-up plus eyebrow shaping, facial hair cleanup, and moisturizing hot towel.</p>
-          </div>
-        </div>
-          
-        <div class ="pricing-wrapper">
-          <div class="pricing-option">
-            <h3>Regular Haircut <span class="price-tag">$20</span></h3>
-            <p class="description">Full haircut using clippers and scissors, finished with styling and mirror check.</p>
-          </div>
-        </div>
-          
-        <div class="pricing-wrapper">
-          <div class="pricing-option">
-            <h3>Regular Haircut + Maintenance Package <span class="price-tag">$25</span></h3>
-            <p class="description">Complete haircut plus eyebrows, beard cleanup, hot towel, and optional razor work.</p>
-          </div>
-        </div>
-        
-        <div class="appointment-btn-wrapper">
-          <a href="appointment.html" class="appointment-btn">Make an Appointment</a>
-        </div>
-      </section>
-
+    
   <script src="js/script.js"></script>
 </body>
 </html>
