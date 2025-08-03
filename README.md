@@ -6,7 +6,7 @@ My freshman-year roommate at college is an incredible barber who even ran his bu
 ---
 
 ## 🌐 Live Website
-[maelcutz.com](https://maelcutz.com)
+[mael-cutz.vercel.app](https://mael-cutz.vercel.app/)
 
 ---
 
