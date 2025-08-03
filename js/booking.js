@@ -1,11 +1,13 @@
 // js/booking.js
 
+const BASE_URL = "https://maelcutz.onrender.com";
+
 window.addEventListener("DOMContentLoaded", async () => {
     const table = document.getElementById("time-slot-table");
     const hiddenInput = document.getElementById("appointment-time-hidden");
 
     try {
-        const res = await fetch("http://localhost:8080/availability");
+        const res = await fetch(`${BASE_URL}/availability`);
         const data = await res.json();
 
         if (!data.availableSlots.length) {
@@ -125,7 +127,7 @@ document.getElementById("booking-form").addEventListener("submit", async (e) => 
     }
 
     try {
-    const response = await fetch("http://localhost:8080/book", {
+        const response = await fetch(`${BASE_URL}/book`, {
         method: "POST",
         headers: {
         "Content-Type": "application/json",
