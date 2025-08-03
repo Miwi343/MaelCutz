@@ -123,7 +123,7 @@ app.post('/book', async (req, res) => {
     }
 
     const auth = new google.auth.GoogleAuth({
-        keyFile: './config/credentials.json',
+        credentials,
         scopes: ['https://www.googleapis.com/auth/calendar'],
     });
 
