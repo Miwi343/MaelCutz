@@ -54,9 +54,9 @@ You can now open `index.html` in your browser to test the website locally.
 
 ---
 
-## 🖼️ Screenshots / Demo
+## My Haircut! LOL
 
-> _Drop images or a GIF showing the site in action here._
+![Funny Gif of My Haircut](images/cut7ReadMe.gif)
 
 ---
 
