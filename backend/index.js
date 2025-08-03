@@ -16,9 +16,10 @@ app.use((req, res, next) => {
     next();
 });
 
+const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
 // Google Calendar Setup
 const auth = new google.auth.GoogleAuth({
-    keyFile: './config/credentials.json',
+    credentials,
     scopes: ['https://www.googleapis.com/auth/calendar'],
 });
 
