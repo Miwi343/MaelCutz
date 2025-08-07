@@ -366,6 +366,20 @@ textarea {
   font-weight: bold;
 }
 
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid var(--gold);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 10px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 /* ========== Responsive Design ========== */
 @media (max-width: 700px) {
@@ -509,6 +523,72 @@ select {
   50% {
     transform: translateX(8px);
   }
+}
+
+/* ========== About Section ========== */
+.about-section {
+  padding: 60px 20px;
+  background-color: rgba(255, 255, 255, 0.02); /* subtle background */
+  color: var(--white);
+  text-align: left;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+.about-section a img.about-image {
+  max-width: 300px;
+}
+
+.about-text {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: 'Anton', sans-serif;
+}
+
+.about-text p {
+  font-weight: 400; /* or 500 for a slightly stronger look */
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.6;
+}
+
+/* ========== Social Footer ========== */
+.social-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover img {
+  opacity: 1;
 }
 
 

@@ -3,6 +3,10 @@
 const BASE_URL = "https://maelcutz.onrender.com";
 
 window.addEventListener("DOMContentLoaded", async () => {
+    const loadingMsg = document.getElementById("loading-message");
+    loadingMsg.style.display = "block"; // show initially
+
+
     const table = document.getElementById("time-slot-table");
     const hiddenInput = document.getElementById("appointment-time-hidden");
 
@@ -91,8 +95,10 @@ window.addEventListener("DOMContentLoaded", async () => {
 
             table.appendChild(column);
         });
+        loadingMsg.style.display = "none"; // hide after loading
 
     } catch (err) {
+        loadingMsg.style.display = "none"; // hide loading message
         console.error("Error loading time slots:", err);
         table.innerHTML = `<p style="color: white;">Error loading times</p>`;
     }
