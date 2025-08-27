@@ -121,13 +121,14 @@ document.getElementById("booking-form").addEventListener("submit", async (e) => 
 
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
+    const phoneNumber = document.getElementById("phone-numer").value.trim();
     const haircutType = document.getElementById("haircut-type").value;
     const referral = document.getElementById("referral").value;
     const notes = document.getElementById("notes").value.trim();
     const appointmentTime = document.getElementById("appointment-time-hidden").value;
 
     // Quick validation (all required fields)
-    if (!name || !email || !haircutType || !referral || !appointmentTime) {
+    if (!name || !phoneNumber || !haircutType || !referral || !appointmentTime) {
     alert("Please fill out all required fields and select a time.");
     return;
     }
@@ -141,6 +142,7 @@ document.getElementById("booking-form").addEventListener("submit", async (e) => 
         body: JSON.stringify({
         name,
         email,
+        phoneNumber,
         haircutType,
         referral,
         notes,
