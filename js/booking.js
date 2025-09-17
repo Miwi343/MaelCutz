@@ -121,7 +121,12 @@ document.getElementById("booking-form").addEventListener("submit", async (e) => 
 
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
-    const phoneNumber = document.getElementById("phone-numer").value.trim();
+    const phoneNumber = document.getElementById("phone-number").value.trim();
+    if (!phoneInput) {
+        console.error("Phone number input not found!");
+        return;
+    }
+    phoneNumber = phoneInput.value.trim();
     const haircutType = document.getElementById("haircut-type").value;
     const referral = document.getElementById("referral").value;
     const notes = document.getElementById("notes").value.trim();
